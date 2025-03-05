@@ -1,0 +1,7 @@
+1. Sideeffect issue.Session is initialize but not deinitialized it may cause side effect somewhere else in the code.
+2. Sideeffect issue.Name is declared global and splitting the variable inside the method may cause side effect.
+3. The condition is double negative which can be confusing, instead change the name of the method.
+4. Redundant function calls happening(eg:GetMaxAltitude()- function), missing default return value here.
+5. No return statement,Create interface insteadof typechecks each time
+6. Create another function to create temporary file instead of using boolean parameters.
+7. Return type missing in GetInstance function, its violating singleton principle ,cause it can create multiple instances
