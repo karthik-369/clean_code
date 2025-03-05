@@ -1,0 +1,7 @@
+1. Variable name is not meaningful,dont use a character (eg:days instead of d)
+2. Function name is vague.Change the function,make it more specific
+3. Variable name doesn't have to contain the datatype (eg: iCounter).Change iCounter to counter,string strFullName as fullname,DateTime to ModifiedDate
+4. Parameters contains prefixes, remove it.
+5. Use a single type of naming conventions eg :constants prefer VARIABLE_NAME, class prefers ClassName and function prefers FunctionName
+6. Give a complete names for the variable, avoid partial names
+7. Variable name is unclear, here at employeephone. and also is it total working days or total working hours
