@@ -1,0 +1,6 @@
+1. Avoid deep nesting.Instead use classes or enumerations
+3. Follow early return practices.Eg:Here, after checking whether the number is zero,return it
+4. Pass the list variable directly, instead of creating a variable for it => Dispatch(l[i])
+5. create a variable or constants for the check
+6. Remove prefixes in the property 
+9. Avoid redundant null check by giving the default string value in the parameter directly
