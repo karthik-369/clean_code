@@ -7,33 +7,30 @@ class HamaraBasket(object):
 
     def update_quality(self):
         for item in self.items:
-            if item.name != "Indian Wine" and item.name != "Movie Tickets":
-                if item.quality > 0:
-                    if item.name != "Forest Honey":
-                        item.quality = item.quality - 1
-            else:
+            if item.name == 'Forest Honey':
+                continue 
+            if item.name == "Indian Wine":
                 if item.quality < 50:
-                    item.quality = item.quality + 1
-                    if item.name == "Movie Tickets":
-                        if item.sell_in < 11:
-                            if item.quality < 50:
-                                item.quality = item.quality + 1
-                        if item.sell_in < 6:
-                            if item.quality < 50:
-                                item.quality = item.quality + 1
-            if item.name != "Forest Honey":
-                item.sell_in = item.sell_in - 1
-            if item.sell_in < 0:
-                if item.name != "Indian Wine":
-                    if item.name != "Movie Tickets":
-                        if item.quality > 0:
-                            if item.name != "Forest Honey":
-                                item.quality = item.quality - 1
-                    else:
-                        item.quality = item.quality - item.quality
+                    item.quality += 1
+                    if item.sell_in < 0 and item.quality < 50:
+                        item.quality += 1
+            elif item.name == "Movie Tickets":
+                if item.sell_in > 0:
+                    item.quality += 1
+                    if item.sell_in < 11 and item.quality < 50:
+                        item.quality += 1
+                    if item.sell_in < 6 and item.quality < 50:
+                        item.quality += 1
                 else:
-                    if item.quality < 50:
-                        item.quality = item.quality + 1
+                    item.quality = 0  # Quality drops to 0 after the event
+            else:  # Regular items
+                if item.quality > 0:
+                    item.quality -= 1
+                    if item.sell_in < 0 and item.quality > 0:
+                        item.quality -= 1  # Degrades twice as fast after sell-in
+            item.sell_in -= 1
+    
+
 
 
 class Item:
