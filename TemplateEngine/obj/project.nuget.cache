@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "nI/bmv2uKsc=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\z004wu2v\\OneDrive - Siemens Healthineers\\Desktop\\cc\\TDDCS\\base\\TddTemplateEngine\\TemplateEngine\\TemplateEngine.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\z004wu2v\\.nuget\\packages\\microsoft.netcore.app.ref\\8.0.13\\microsoft.netcore.app.ref.8.0.13.nupkg.sha512",
+    "C:\\Users\\z004wu2v\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\8.0.13\\microsoft.windowsdesktop.app.ref.8.0.13.nupkg.sha512",
+    "C:\\Users\\z004wu2v\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\8.0.13\\microsoft.aspnetcore.app.ref.8.0.13.nupkg.sha512"
+  ],
+  "logs": []
+}
