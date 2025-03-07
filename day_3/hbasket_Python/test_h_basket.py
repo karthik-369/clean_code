@@ -44,6 +44,18 @@ class TestHamaraBasket(unittest.TestCase):
 
         # Assert
         self.assertEqual(items[0].sell_in, -1)
+
+    def test_quality_decreases_twice_as_fast_after_quality(self):
+        # Arrange
+        name = "Regular Item"
+        sell_in = 0
+        quality = 10    
+        items = self.domain_factory.single_item_provider(name, sell_in, quality)
+
+        # Act
+        self.domain_factory.update_quality(items)
+
+        # Assert
         self.assertEqual(items[0].quality, 8)
 
     def test_quality_never_goes_below_zero(self):
@@ -83,8 +95,7 @@ class TestHamaraBasket(unittest.TestCase):
 
         # Act
         self.domain_factory.update_quality(items)
-
-        # Assert
+        
         self.assertEqual(items[0].sell_in, 9)
         self.assertEqual(items[0].quality, 50)
 
@@ -94,10 +105,11 @@ class TestHamaraBasket(unittest.TestCase):
         sell_in = 10
         quality = 30
         items = self.domain_factory.single_item_provider(name, sell_in, quality)
-
+        
         # Act
         self.domain_factory.update_quality(items)
-
+        print(items[0].sell_in)
+        print(items[0].quality)
         # Assert
         self.assertEqual(items[0].sell_in, 10)
         self.assertEqual(items[0].quality, 30)
